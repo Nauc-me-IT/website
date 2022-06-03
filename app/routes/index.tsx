@@ -39,10 +39,22 @@ export default function Index() {
                       Login
                     </Button>
                     <Button theme='off' to='/login'>
-                      Sign Up
+                      Login
                     </Button>
                     <SocialButton onClick={() => undefined}>Test</SocialButton>
                     <SocialButton to='/login'>Test</SocialButton>
+                    <Link
+                      to='/join'
+                      className='border-transparent bg-white text-yellow-700 hover:bg-yellow-50 flex items-center justify-center rounded-md border px-4 py-3 text-base font-medium shadow-sm sm:px-8'
+                    >
+                      Sign up
+                    </Link>
+                    <Link
+                      to='/login'
+                      className='bg-yellow-500 text-white hover:bg-yellow-600 flex items-center justify-center rounded-md px-4 py-3 font-medium  '
+                    >
+                      Log In
+                    </Link>
                   </div>
                 )}
               </div>

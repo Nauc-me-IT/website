@@ -7,9 +7,3 @@ interface CSS {
     readonly addModule: (module: string) => void
   }
 }
-
-declare module "react" {
-  interface CSSProperties {
-    readonly [key: `--${string}`]: string | number
-  }
-}

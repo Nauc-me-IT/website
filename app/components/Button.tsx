@@ -1,5 +1,3 @@
-import { Link } from "@remix-run/react"
-
 type Props = {
   readonly theme: "main" | "off"
   readonly children: string
@@ -28,7 +26,8 @@ const hexagonBorderVars = {
 } as React.CSSProperties
 
 export function Button({ classNames, disabled, children, theme, ...rest }: ButtonProps) {
-  const El = "to" in rest ? Link : "button"
+  const El = /* "to" in rest ? Link : */ "button"
+
   return (
     <El
       className={`${mainClasses} ${themeClasses[theme]} ${
@@ -44,7 +43,7 @@ export function Button({ classNames, disabled, children, theme, ...rest }: Butto
 }
 
 export function SocialButton({ classNames, disabled, children, ...rest }: SocialButtonProps) {
-  const El = "to" in rest ? Link : "button"
+  const El = /* "to" in rest ? Link : */ "button"
 
   return (
     <El
