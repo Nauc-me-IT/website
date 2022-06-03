@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@property --border {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0;
+}
+
+.theme-dark {
+  --color-primary: 255 50 255;
+  --color-secondary: 128 238 255;
+  --color-off: 227 0 213;
+  --color-background: 9 12 40;
+  --color-highlight: 255 255 255;
+  --color-form: 166 177 187;
+}
+
+@layer utilities {
+  .polygon-path {
+    clip-path: polygon(var(--path));
+    position: relative;
+  }
+
+  .polygon-path:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    mask: paint(polygon-border);
+  }
+}
