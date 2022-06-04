@@ -29,6 +29,25 @@ module.exports = {
     appearance: {
       button: "button",
     },
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
+      montserrat: ["Montserrat", "sans-serif"],
+    },
+    fontSize: {
+      xs: "0.875rem",
+      sm: "1rem",
+      base: "1.125rem",
+      lg: "1.25rem",
+      xl: "1.875rem",
+      "2xl": "2.813rem",
+      "3xl": "3.5rem",
+      "4xl": "4.375rem",
+    },
+    letterSpacing: {
+      normal: "0",
+      wider: "0.019rem",
+      huge: "0.281rem",
+    },
     extend: {
       keyframes: {
         wiggle: {

@@ -42,7 +42,10 @@ export default function NoteDetailsPage() {
       <p className='py-6'>{data.note.body}</p>
       <hr className='my-4' />
       <Form method='post'>
-        <button type='submit' className='bg-blue-500 text-white  hover:bg-blue-600 focus:bg-blue-400 rounded py-2 px-4'>
+        <button
+          type='submit'
+          className='bg-blue-500 hover:bg-blue-600  focus:bg-blue-400 rounded py-2 px-4 text-highlight'
+        >
           Delete
         </button>
       </Form>

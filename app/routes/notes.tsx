@@ -22,7 +22,7 @@ export default function NotesPage() {
 
   return (
     <div className='flex h-full min-h-screen flex-col'>
-      <header className='bg-slate-800 text-white flex items-center justify-between p-4'>
+      <header className='bg-slate-800 flex items-center justify-between p-4 text-highlight'>
         <h1 className='text-3xl font-bold'>
           <Link to='.'>Notes</Link>
         </h1>
