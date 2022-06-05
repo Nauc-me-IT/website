@@ -25,18 +25,27 @@ export const loader: LoaderFunction = async ({ request }) => {
   })
 }
 
+const registerScript = `
+if (CSS.paintWorklet) {
+  CSS.paintWorklet.addModule('/registerPaint.js');
+} else {
+  alert("Your browser cannot run this demo. Consider Chrome or Edge instead")
+}
+`
+
 export default function App() {
   return (
-    <html lang='en' className='h-full'>
+    <html lang='en' className='theme-dark h-full'>
       <head>
         <Meta />
         <Links />
       </head>
-      <body className='h-full'>
+      <body className='h-full font-montserrat'>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <script type='text/javascript' dangerouslySetInnerHTML={{ __html: registerScript }} />
       </body>
     </html>
   )
