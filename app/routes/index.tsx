@@ -35,13 +35,13 @@ export default function Index() {
                   </Link>
                 ) : (
                   <div className='space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0'>
-                    <Button theme='off' onClick={() => undefined}>
-                      Login
-                    </Button>
                     <Button theme='off' to='/login'>
                       Login
                     </Button>
-                    <SocialButton onClick={() => undefined}>Test</SocialButton>
+                    <Button theme='main' to='/playground'>
+                      Playground
+                    </Button>
+                    <SocialButton to='/playground'>Test</SocialButton>
                     <SocialButton to='/login'>Test</SocialButton>
                     <Link
                       to='/join'
