@@ -1,4 +1,5 @@
 import { Link } from "@remix-run/react"
+import { typographyClasses } from "./Typography"
 
 type Props = {
   readonly theme: "main" | "off"
@@ -13,7 +14,7 @@ type ButtonProps = LinkButtonProps | NormalButtonProps
 type SocialButtonProps = Omit<NormalButtonProps, "theme"> | Omit<LinkButtonProps, "theme">
 
 const mainClasses =
-  "text-base text-highlight border-none py-2 px-5 polygon-path focus-visible:outline-none before:bg-primary focus:before:bg-secondary text-center appearance-button"
+  "border-none py-2 px-5 polygon-path focus-visible:outline-none before:bg-primary focus:before:bg-secondary text-center appearance-button"
 const themeClasses = {
   main: "bg-primary",
   off: "bg-scroll bg-animable bg-clip-border bg-origin-padding bg-transparent bg-100/0 bg-bottom bg-no-repeat transition-all duration-500 ease hover:bg-100/100",
@@ -29,9 +30,9 @@ const hexagonBorderVars = {
 
 export function Button({ classNames, disabled, children, theme, ...rest }: ButtonProps) {
   const props = {
-    classNames: `${mainClasses} ${themeClasses[theme]} ${
+    className: `${mainClasses} ${themeClasses[theme]} ${
       disabled ? "cursor-not-allowed opacity-80" : "cursor-pointer hover:animate-wiggle"
-    }${classNames ?? ""}`,
+    } ${typographyClasses.normal} ${classNames ?? ""}`,
     style: polygonBorderVars,
   }
   return "to" in rest ? (
@@ -47,9 +48,9 @@ export function Button({ classNames, disabled, children, theme, ...rest }: Butto
 
 export function SocialButton({ classNames, disabled, children, ...rest }: SocialButtonProps) {
   const props = {
-    classNames: `${mainClasses} ${themeClasses.off} ${
+    className: `${mainClasses} ${themeClasses.off} ${
       disabled ? "cursor-not-allowed opacity-80" : "cursor-pointer hover:animate-wiggle"
-    }${classNames ?? ""}`,
+    } ${typographyClasses.normal} ${classNames ?? ""}`,
     style: hexagonBorderVars,
   }
   return "to" in rest ? (

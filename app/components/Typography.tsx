@@ -1,4 +1,4 @@
-const classes = {
+export const typographyClasses = {
   h1: "font-poppins font-semibold text-3xl text-secondary uppercase",
   h2: "font-poppins font-light text-2xl text-primary",
   h3: "font-poppins font-light text-xl text-secondary tracking-wider",
@@ -12,11 +12,11 @@ const classes = {
   menu: "font-poppins font-medium text-base text-highlight",
   menuActive: "font-poppins font-bold text-base text-secondary",
 } as const
-export const types = Object.keys(classes) as readonly (keyof typeof classes)[]
+export const types = Object.keys(typographyClasses) as readonly (keyof typeof typographyClasses)[]
 
 type TypographyProps = {
   readonly children: React.ReactNode
-  readonly variant: keyof typeof classes
+  readonly variant: keyof typeof typographyClasses
   readonly component?: React.ElementType
   readonly className?: string
 }
@@ -25,7 +25,7 @@ export function Typography({ className, children, variant, component, ...rest }:
   const Element = component ?? "span"
 
   return (
-    <Element {...rest} className={`${classes[variant]} ${className}`}>
+    <Element {...rest} className={`${typographyClasses[variant]} ${className}`}>
       {children}
     </Element>
   )
