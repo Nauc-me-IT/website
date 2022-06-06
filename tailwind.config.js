@@ -49,6 +49,9 @@ module.exports = {
       huge: "0.281rem",
     },
     extend: {
+      maxWidth: {
+        xxs: "14rem",
+      },
       keyframes: {
         wiggle: {
           "0%, 100%": { transform: "rotate(-2deg)" },

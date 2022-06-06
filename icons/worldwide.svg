@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="98" height="94" viewBox="0 0 98 94">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2331" data-name="Rectangle 2331" width="69.587" height="69.587" fill="none" stroke="#80eeff" stroke-width="2.5"/>
+    </clipPath>
+  </defs>
+  <g id="Group_6311" data-name="Group 6311" transform="translate(-618 -706)">
+    <rect id="Rectangle_2315" data-name="Rectangle 2315" width="98" height="94" transform="translate(618 706)" fill="#80eeff" opacity="0"/>
+    <g id="Group_6309" data-name="Group 6309" transform="translate(632.003 718.003)">
+      <g id="Group_6310" data-name="Group 6310" clip-path="url(#clip-path)">
+        <circle id="Ellipse_18" data-name="Ellipse 18" cx="32.547" cy="32.547" r="32.547" transform="translate(2.247 2.247)" fill="none" stroke="#80eeff" stroke-width="2.5"/>
+        <line id="Line_23" data-name="Line 23" y2="65.094" transform="translate(34.794 2.247)" fill="none" stroke="#80eeff" stroke-width="2.5"/>
+        <path id="Path_4395" data-name="Path 4395" d="M49.154,69.221C46.48,66.472,35.917,54.976,35.979,37.553,36.044,19.012,48.092,7.127,50.7,4.669" transform="translate(-18.016 -2.338)" fill="none" stroke="#80eeff" stroke-width="2.5"/>
+        <path id="Path_4396" data-name="Path 4396" d="M75.319,69.221c2.674-2.749,13.237-14.245,13.176-31.669-.065-18.54-12.114-30.426-14.72-32.884" transform="translate(-36.942 -2.338)" fill="none" stroke="#80eeff" stroke-width="2.5"/>
+        <line id="Line_24" data-name="Line 24" x2="65.094" transform="translate(2.247 34.263)" fill="none" stroke="#80eeff" stroke-width="2.5"/>
+        <path id="Path_4397" data-name="Path 4397" d="M16.349,32.208S22.932,36.78,42.98,36.6s26.632-4.391,26.632-4.391" transform="translate(-8.187 -16.128)" fill="none" stroke="#80eeff" stroke-width="2.5"/>
+        <path id="Path_4398" data-name="Path 4398" d="M16.349,102.527s6.583-4.572,26.631-4.391,26.632,4.391,26.632,4.391" transform="translate(-8.187 -49.138)" fill="none" stroke="#80eeff" stroke-width="2.5"/>
+      </g>
+    </g>
+  </g>
+</svg>
