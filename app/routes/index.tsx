@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react"
-import { Button, SocialButton } from "~/components/Button"
+import { Button } from "~/components/Button"
 
 import { useOptionalUser } from "~/utils"
 
@@ -41,8 +41,6 @@ export default function Index() {
                     <Button theme='main' to='/playground'>
                       Playground
                     </Button>
-                    <SocialButton to='/playground'>Test</SocialButton>
-                    <SocialButton to='/login'>Test</SocialButton>
                     <Link
                       to='/join'
                       className='border-transparent bg-white text-yellow-700 hover:bg-yellow-50 flex items-center justify-center rounded-md border px-4 py-3 font-medium text-highlight shadow-sm sm:px-8'

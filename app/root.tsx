@@ -35,7 +35,7 @@ if (CSS.paintWorklet) {
 
 export default function App() {
   return (
-    <html lang='en' className='theme-dark h-full'>
+    <html lang='en' className='theme-dark h-full bg-background'>
       <head>
         <Meta />
         <Links />

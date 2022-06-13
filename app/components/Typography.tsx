@@ -1,6 +1,6 @@
 export const typographyClasses = {
   h1: "font-poppins font-semibold text-3xl text-secondary uppercase",
-  h2: "font-poppins font-light text-2xl text-primary",
+  h2: "font-poppins font-light text-2xl text-primary leading-tight",
   h3: "font-poppins font-light text-xl text-secondary tracking-wider",
   step: "font-poppins font-light text-lg text-secondary",
   important: "font-poppins font-light text-base text-highlight",
