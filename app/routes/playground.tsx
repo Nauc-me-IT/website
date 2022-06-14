@@ -1,5 +1,6 @@
 import { SocialButton } from "~/components/Button"
 import { CompanyBox } from "~/components/CompanyBox"
+import { Step } from "~/components/Step"
 import { types, Typography } from "~/components/Typography"
 import { Facebook, LearnEarn, PayConsultancy, Time, Worldwide } from "~/icons"
 import { CatchPoints } from "../components/CatchPoints"
@@ -23,6 +24,7 @@ export default function Playground() {
         </Typography>
       ))}
       <CompanyBox />
+      <Step order={3}>Zaregistruj se ZDARMA do kurzu</Step>
     </div>
   )
 }
