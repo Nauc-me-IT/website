@@ -1,5 +1,6 @@
 import { SocialButton } from "~/components/Button"
 import { CompanyBox } from "~/components/CompanyBox"
+import { CourseBox } from "~/components/CourseBox"
 import { Step } from "~/components/Step"
 import { types, Typography } from "~/components/Typography"
 import { Facebook, LearnEarn, PayConsultancy, Time, Worldwide } from "~/icons"
@@ -25,6 +26,14 @@ export default function Playground() {
       ))}
       <CompanyBox />
       <Step order={3}>Zaregistruj se ZDARMA do kurzu</Step>
+      <CourseBox
+        image={"/images/qa_illustration.png"}
+        side={"left"}
+        title={"Vývojář"}
+        children={
+          "Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester, nepotřebuješ mnoho."
+        }
+      ></CourseBox>
     </div>
   )
 }
