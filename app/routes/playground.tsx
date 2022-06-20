@@ -10,7 +10,7 @@ export default function Playground() {
       <SocialButton to='/'>
         <Facebook />
       </SocialButton>
-      <SocialButton onClick={() => undefined}>
+      <SocialButton onClick={() => alert("click works")}>
         <Facebook />
       </SocialButton>
       <CatchPoints icon={<LearnEarn />}>Učíš se a zároveň vyděláváš</CatchPoints>

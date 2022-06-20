@@ -15,7 +15,7 @@ type SocialButtonProps = (Omit<NormalButtonProps, "theme"> | Omit<LinkButtonProp
 }
 
 const mainClasses =
-  "border-none py-2 px-5 polygon-path focus-visible:outline-none before:bg-primary focus:before:bg-secondary text-center appearance-button"
+  "border-none polygon-path focus-visible:outline-none before:bg-primary focus:before:bg-secondary text-center appearance-button"
 const themeClasses = {
   main: "bg-primary",
   off: "bg-scroll bg-animable bg-clip-border bg-origin-padding bg-transparent bg-100/0 bg-bottom bg-no-repeat transition-all duration-500 ease hover:bg-100/100",
@@ -33,13 +33,15 @@ export function Button({ classNames, disabled, children, theme, ...rest }: Butto
   const props = {
     className: `${mainClasses} ${themeClasses[theme]} ${
       disabled ? "cursor-not-allowed opacity-80" : "cursor-pointer hover:animate-wiggle"
-    } ${typographyClasses.normal} ${classNames ?? ""}`,
+    } ${"to" in rest ? "pointer-events-none" : "py-2 px-5"} ${typographyClasses.normal} ${classNames ?? ""}`,
     style: polygonBorderVars,
   }
   return "to" in rest ? (
-    <Link {...props} {...rest}>
-      {children}
-    </Link>
+    <button {...props}>
+      <Link {...rest} className='pointer-events-auto inline-flex py-2 px-5'>
+        {children}
+      </Link>
+    </button>
   ) : (
     <button {...props} {...rest}>
       {children}
@@ -51,13 +53,17 @@ export function SocialButton({ classNames, disabled, children, ...rest }: Social
   const props = {
     className: `${mainClasses} ${themeClasses.off} ${
       disabled ? "cursor-not-allowed opacity-80" : "cursor-pointer hover:animate-wiggle"
-    } ${typographyClasses.normal} ${classNames ?? ""} inline-block aspect-square`,
+    } ${"to" in rest ? "pointer-events-none" : "py-2 px-5"} ${typographyClasses.normal} ${
+      classNames ?? ""
+    } inline-flex items-center aspect-square`,
     style: hexagonBorderVars,
   }
   return "to" in rest ? (
-    <Link {...props} {...rest}>
-      {children}
-    </Link>
+    <button {...props}>
+      <Link {...rest} className='pointer-events-auto inline-flex py-2 px-5'>
+        {children}
+      </Link>
+    </button>
   ) : (
     <button {...props} {...rest}>
       {children}
