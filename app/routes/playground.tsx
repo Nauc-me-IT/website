@@ -9,6 +9,14 @@ import { CatchPoints } from "../components/CatchPoints"
 export default function Playground() {
   return (
     <div className='h-screen bg-background'>
+      <CourseBox image='/images/qa_illustration.webp' side='left' title='Vývojář' link='/'>
+        Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
+        nepotřebuješ mnoho.
+      </CourseBox>
+      <CourseBox image='/images/qa_illustration.webp' side='right' title='Vývojář' link='/'>
+        Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
+        nepotřebuješ mnoho.
+      </CourseBox>
       <SocialButton to='/'>
         <Facebook />
       </SocialButton>
@@ -26,14 +34,6 @@ export default function Playground() {
       ))}
       <CompanyBox />
       <Step order={3}>Zaregistruj se ZDARMA do kurzu</Step>
-      <CourseBox image='/images/qa_illustration.png' side='left' title='Vývojář' link='/'>
-        Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
-        nepotřebuješ mnoho.
-      </CourseBox>
-      <CourseBox image='/images/qa_illustration.png' side='right' title='Vývojář' link='/'>
-        Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
-        nepotřebuješ mnoho.
-      </CourseBox>
     </div>
   )
 }
