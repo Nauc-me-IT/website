@@ -52,6 +52,7 @@ module.exports = {
     extend: {
       maxWidth: {
         xxs: "14rem",
+        xsProse: "41ch",
       },
       keyframes: {
         wiggle: {
