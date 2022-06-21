@@ -14,18 +14,19 @@ export const typographyClasses = {
 } as const
 export const types = Object.keys(typographyClasses) as readonly (keyof typeof typographyClasses)[]
 
-type TypographyProps = {
+type TypographyProps<T = unknown> = {
   readonly children: React.ReactNode
   readonly variant: keyof typeof typographyClasses
   readonly component?: React.ElementType
   readonly className?: string
+  readonly componentProps?: { readonly [key: string]: T }
 }
 
-export function Typography({ className, children, variant, component, ...rest }: TypographyProps) {
+export function Typography({ className, children, variant, component, componentProps }: TypographyProps) {
   const Element = component ?? "span"
 
   return (
-    <Element {...rest} className={`${typographyClasses[variant]} ${className}`}>
+    <Element {...componentProps} className={`${typographyClasses[variant]} ${className || ""}`}>
       {children}
     </Element>
   )

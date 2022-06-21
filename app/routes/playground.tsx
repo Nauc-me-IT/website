@@ -1,5 +1,6 @@
 import { SocialButton } from "~/components/Button"
 import { CompanyBox } from "~/components/CompanyBox"
+import { CourseBox } from "~/components/CourseBox"
 import { Step } from "~/components/Step"
 import { types, Typography } from "~/components/Typography"
 import { Facebook, LearnEarn, PayConsultancy, Time, Worldwide } from "~/icons"
@@ -8,6 +9,14 @@ import { CatchPoints } from "../components/CatchPoints"
 export default function Playground() {
   return (
     <div className='h-screen bg-background'>
+      <CourseBox image='/images/qa_illustration.webp' side='left' title='Vývojář' link='/'>
+        Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
+        nepotřebuješ mnoho.
+      </CourseBox>
+      <CourseBox image='/images/qa_illustration.webp' side='right' title='Vývojář' link='/'>
+        Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
+        nepotřebuješ mnoho.
+      </CourseBox>
       <SocialButton to='/'>
         <Facebook />
       </SocialButton>
