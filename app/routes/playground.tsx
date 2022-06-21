@@ -1,3 +1,4 @@
+import { AboutUs } from "~/components/AboutUs"
 import { SocialButton } from "~/components/Button"
 import { CompanyBox } from "~/components/CompanyBox"
 import { CourseBox } from "~/components/CourseBox"
@@ -9,6 +10,7 @@ import { CatchPoints } from "../components/CatchPoints"
 export default function Playground() {
   return (
     <div className='h-screen bg-background'>
+      <AboutUs />
       <CourseBox image='/images/qa_illustration.webp' side='left' title='Vývojář' link='/'>
         Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
         nepotřebuješ mnoho.
