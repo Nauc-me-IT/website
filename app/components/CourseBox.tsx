@@ -1,6 +1,6 @@
+import type { To } from "history"
 import { Link } from "@remix-run/react"
 import * as React from "react"
-import type { To } from "react-router-dom"
 import { Typography } from "./Typography"
 type Props = {
   readonly image: string
