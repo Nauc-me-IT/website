@@ -19,17 +19,6 @@ module.exports = {
       highlight: withOpacityValue("--color-highlight"),
       form: withOpacityValue("--color-form"),
     },
-    backgroundSize: {
-      "100/100": "100% 100%",
-      "100/0": "100% 0%",
-    },
-    backgroundImage: {
-      animable: "linear-gradient(rgb(var(--color-primary)) 0 0)",
-      alt: "linear-gradient(90deg, rgb(17, 25, 58) 0%, rgb(54, 69, 122) 100%), linear-gradient(270deg, rgba(109,157,255,0.4) 0%, rgba(141,130,255,0.4) 54%, rgba(47,58,145,0.4) 87.9%, rgba(21,45,86,0.4) 100%)",
-    },
-    appearance: {
-      button: "button",
-    },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
       montserrat: ["Montserrat", "sans-serif"],
@@ -50,6 +39,20 @@ module.exports = {
       huge: "0.281rem",
     },
     extend: {
+      appearance: {
+        button: "button",
+      },
+      backgroundColor: {
+        transparent: "transparent",
+      },
+      backgroundSize: {
+        "100/100": "100% 100%",
+        "100/0": "100% 0%",
+      },
+      backgroundImage: {
+        animable: "linear-gradient(rgb(var(--color-primary)) 0 0)",
+        alt: "linear-gradient(90deg, rgb(17, 25, 58) 0%, rgb(54, 69, 122) 100%), linear-gradient(270deg, rgba(109,157,255,0.4) 0%, rgba(141,130,255,0.4) 54%, rgba(47,58,145,0.4) 87.9%, rgba(21,45,86,0.4) 100%)",
+      },
       maxWidth: {
         xxs: "14rem",
         xsProse: "41ch",
