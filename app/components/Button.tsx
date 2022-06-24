@@ -1,15 +1,19 @@
 import { Link } from "@remix-run/react"
+import type { RemixLinkProps } from "@remix-run/react/components"
 import { typographyClasses } from "./Typography"
 
 type Props = {
   readonly theme: "main" | "off"
   readonly disabled?: boolean
-  readonly classNames?: string
+  readonly className?: string
 }
 // eslint-disable-next-line functional/no-return-void
-type NormalButtonProps = Props & { readonly onClick: () => void }
-type LinkButtonProps = Props & { readonly to: string }
-type ButtonProps = (LinkButtonProps | NormalButtonProps) & { readonly children: string }
+type NormalButtonProps = Props & JSX.IntrinsicElements["button"]
+type LinkButtonProps = Props & RemixLinkProps
+type ButtonProps = (LinkButtonProps | NormalButtonProps) & {
+  readonly children: string
+  readonly size?: "large" | "normal"
+}
 type SocialButtonProps = (Omit<NormalButtonProps, "theme"> | Omit<LinkButtonProps, "theme">) & {
   readonly children: React.ReactElement
 }
@@ -20,6 +24,10 @@ const themeClasses = {
   main: "bg-primary",
   off: "bg-scroll bg-animable bg-clip-border bg-origin-padding bg-transparent bg-100/0 bg-bottom bg-no-repeat transition-all duration-500 ease hover:bg-100/100",
 }
+const sizeClasses = {
+  large: "pt-6 pb-5 pl-11 pr-12",
+  normal: "",
+}
 const polygonBorderVars = {
   "--path": "20% 0%, 90% 0%, 100% 20%, 100% 50%, 80% 100%, 20% 100%, 10% 100%, 0% 70%, 0% 40%",
   "--border": "2px",
@@ -29,15 +37,17 @@ const hexagonBorderVars = {
   "--border": "2px",
 } as React.CSSProperties
 
-export function Button({ classNames, disabled, children, theme, ...rest }: ButtonProps) {
+export function Button({ className, disabled, children, theme, size, ...rest }: ButtonProps) {
   const props = {
     className: `${mainClasses} ${themeClasses[theme]} ${
       disabled ? "cursor-not-allowed opacity-80" : "cursor-pointer hover:animate-wiggle"
-    } ${"to" in rest ? "pointer-events-none" : "py-2 px-5"} ${typographyClasses.normal} ${classNames ?? ""}`,
+    } ${"to" in rest ? "pointer-events-none" : "py-2 px-5"} ${typographyClasses.normal} ${
+      sizeClasses[size || "normal"]
+    } ${className ?? ""}`,
     style: polygonBorderVars,
   }
   return "to" in rest ? (
-    <button {...props}>
+    <button {...props} tabIndex={-1}>
       <Link {...rest} className='pointer-events-auto inline-flex py-2 px-5'>
         {children}
       </Link>
@@ -49,17 +59,17 @@ export function Button({ classNames, disabled, children, theme, ...rest }: Butto
   )
 }
 
-export function SocialButton({ classNames, disabled, children, ...rest }: SocialButtonProps) {
+export function SocialButton({ className, disabled, children, ...rest }: SocialButtonProps) {
   const props = {
     className: `${mainClasses} ${themeClasses.off} ${
       disabled ? "cursor-not-allowed opacity-80" : "cursor-pointer hover:animate-wiggle"
     } ${"to" in rest ? "pointer-events-none" : "py-2 px-5"} ${typographyClasses.normal} ${
-      classNames ?? ""
+      className ?? ""
     } inline-flex items-center aspect-square`,
     style: hexagonBorderVars,
   }
   return "to" in rest ? (
-    <button {...props}>
+    <button {...props} tabIndex={-1}>
       <Link {...rest} className='pointer-events-auto inline-flex py-2 px-5'>
         {children}
       </Link>
