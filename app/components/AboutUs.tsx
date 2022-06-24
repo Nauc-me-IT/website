@@ -50,7 +50,7 @@ export function AboutUs({ people }: Props) {
             <Typography variant='normal' className='text-center'>
               {p.position}
             </Typography>
-            <Typography variant='link' className='text-center underline'>
+            <Typography variant='link' className='text-center'>
               {p.email}
             </Typography>
           </div>
