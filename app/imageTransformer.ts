@@ -2,7 +2,7 @@ import type { Transformer } from "remix-image"
 import { MimeType } from "remix-image"
 import sharp from "sharp"
 
-const supportedInputs = new Set([MimeType.JPEG, MimeType.PNG, MimeType.WEBP, MimeType.TIFF])
+const supportedInputs = new Set([MimeType.JPEG, MimeType.PNG, MimeType.WEBP, MimeType.TIFF, MimeType.AVIF])
 
 const supportedOutputs = new Set([MimeType.AVIF, MimeType.WEBP])
 
@@ -12,18 +12,7 @@ export const sharpTransformer: Transformer = {
   supportedOutputs,
   transform: async (
     { data },
-    {
-      contentType: outputContentType,
-      width,
-      height,
-      fit,
-      position,
-      background,
-      quality,
-      compressionLevel,
-      loop,
-      delay,
-    },
+    { contentType: outputContentType, width, height, fit, position, background, quality, compressionLevel },
   ) => {
     const image = sharp(data)
 
@@ -50,20 +39,16 @@ export const sharpTransformer: Transformer = {
         compressionLevel,
         force: outputContentType === MimeType.PNG,
       })
-      // Possible, but requires additional sharp config
-      // .gif({
-      //   loop,
-      //   delay: delay ? [delay] : undefined,
-      //   force: outputContentType === MimeType.GIF,
-      // })
+      .avif({
+        quality,
+        force: outputContentType === MimeType.AVIF,
+        speed: 0,
+        effort: 9,
+      })
       .webp({
         quality,
         force: outputContentType === MimeType.WEBP,
-      })
-      .tiff({
-        quality,
-        // cannot be displayed on browsers
-        force: false,
+        effort: 6,
       })
 
     return image.toBuffer()
