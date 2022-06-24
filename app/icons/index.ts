@@ -1,4 +1,5 @@
 export { default as Facebook } from "./Facebook"
+export { default as Instagram } from "./Instagram"
 export { default as LearnEarn } from "./LearnEarn"
 export { default as PayConsultancy } from "./PayConsultancy"
 export { default as Time } from "./Time"
