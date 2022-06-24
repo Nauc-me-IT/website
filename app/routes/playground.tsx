@@ -9,13 +9,13 @@ import { CatchPoints } from "../components/CatchPoints"
 export default function Playground() {
   return (
     <div className='h-screen bg-background'>
-      <CourseBox image='/images/qa_illustration.webp' side='left' title='Vývojář' link='/'>
+      <CourseBox image='/images/qa_illustration.png' side='right' title='Tester' link='/'>
         Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
         nepotřebuješ mnoho.
       </CourseBox>
-      <CourseBox image='/images/qa_illustration.webp' side='right' title='Vývojář' link='/'>
-        Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
-        nepotřebuješ mnoho.
+      <CourseBox image='/images/dev_illustration.png' side='left' title='Vývojář' link='/'>
+        Jako vývojář se můžeš vydat mnoha směry. Důležité je však mít pevné základy, které ti dají rozhled a možnost
+        vybrat si přesně to, co ti vyhovuje.
       </CourseBox>
       <SocialButton to='/'>
         <Facebook />
