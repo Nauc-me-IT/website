@@ -1,4 +1,5 @@
-import type { DetailedHTMLProps, InputHTMLAttributes } from "react"
+import type { DetailedHTMLProps, InputHTMLAttributes} from "react";
+import { useId } from "react"
 import { Typography, typographyClasses } from "./Typography"
 
 type InputProps = { readonly width?: string; readonly label: string; readonly component?: "input" } & DetailedHTMLProps<
@@ -21,10 +22,10 @@ export function DecoratedInput(props: TextareaProps): JSX.Element
 export function DecoratedInput(props: InputProps | TextareaProps): JSX.Element {
   // TODO: Needs to solve props inference
   const Input: any = props.component ?? "input"
-  const name = props.label.replace(" ", "_").toLowerCase()
+  const id = useId()
   return (
     <div className={`flex flex-col gap-y-4 ${props.width || "w-full"}`}>
-      <Typography componentProps={{ htmlFor: name }} component='label' variant='normal'>
+      <Typography componentProps={{ htmlFor: id }} component='label' variant='normal'>
         {props.label}
       </Typography>
       <div
@@ -33,7 +34,7 @@ export function DecoratedInput(props: InputProps | TextareaProps): JSX.Element {
       >
         <Input
           {...props}
-          name={name}
+          name={id}
           className={`${
             typographyClasses.form
           } w-full bg-transparent px-6 pt-5 pb-4 outline-none transition-colors duration-150 focus:text-highlight ${

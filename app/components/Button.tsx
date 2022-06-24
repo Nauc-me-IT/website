@@ -5,7 +5,7 @@ import { typographyClasses } from "./Typography"
 type Props = {
   readonly theme: "main" | "off"
   readonly disabled?: boolean
-  readonly classNames?: string
+  readonly className?: string
 }
 // eslint-disable-next-line functional/no-return-void
 type NormalButtonProps = Props & JSX.IntrinsicElements["button"]
