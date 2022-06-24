@@ -1,4 +1,4 @@
-import type { DetailedHTMLProps, InputHTMLAttributes} from "react";
+import type { DetailedHTMLProps, InputHTMLAttributes } from "react"
 import { useId } from "react"
 import { Typography, typographyClasses } from "./Typography"
 
