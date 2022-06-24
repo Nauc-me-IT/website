@@ -62,9 +62,14 @@ module.exports = {
           "0%, 100%": { transform: "rotate(-2deg)" },
           "50%": { transform: "rotate(2deg)" },
         },
+        pulseDown: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(11px)" },
+        },
       },
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
+        pulseDown: "pulseDown 3s ease-in-out infinite",
       },
     },
   },
