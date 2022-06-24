@@ -7,10 +7,37 @@ import { Step } from "~/components/Step"
 import { types, Typography } from "~/components/Typography"
 import { Facebook, LearnEarn, PayConsultancy, Time, Worldwide } from "~/icons"
 import { CatchPoints } from "~/components/CatchPoints"
+import { Menu } from "~/components/Menu"
 
 export default function Playground() {
   return (
-    <div className='h-screen bg-background'>
+    <div className='h-screen bg-background pt-20'>
+      <Menu
+        items={[
+          {
+            title: "Úvod",
+            link: "#home",
+            active: true,
+          },
+          {
+            title: "O kurzu",
+            link: "#about",
+          },
+          {
+            title: "Tester",
+            link: "#qa",
+          },
+          {
+            title: "Vývojář",
+            link: "#developer",
+          },
+          {
+            title: "Kontakt",
+            link: "#contact",
+          },
+        ]}
+      />
+
       <ContactForm />
 
       <AboutUs
