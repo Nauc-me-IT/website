@@ -8,6 +8,7 @@ import { types, Typography } from "~/components/Typography"
 import { Facebook, LearnEarn, PayConsultancy, Time, Worldwide } from "~/icons"
 import { CatchPoints } from "~/components/CatchPoints"
 import { Menu } from "~/components/Menu"
+import { DownArrow } from "~/components/DownArrow"
 
 export default function Playground() {
   return (
@@ -37,6 +38,8 @@ export default function Playground() {
           },
         ]}
       />
+
+      <DownArrow />
 
       <ContactForm />
 
