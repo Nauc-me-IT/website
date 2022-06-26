@@ -40,7 +40,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className='h-full font-montserrat'>
+      <body className='h-full scroll-smooth font-montserrat'>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
