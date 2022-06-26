@@ -10,7 +10,7 @@ export const typographyClasses = {
   form: "font-poppins italic font-light text-xs text-form",
   eyeCatch: "font-poppins font-semibold text-4xl uppercase text-secondary tracking-huge",
   menu: "font-poppins font-medium text-base text-highlight",
-  menuActive: "font-poppins font-bold text-base text-secondary",
+  menuActive: "font-poppins font-bold text-base text-primary",
 } as const
 export const types = Object.keys(typographyClasses) as readonly (keyof typeof typographyClasses)[]
 

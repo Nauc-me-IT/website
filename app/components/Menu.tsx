@@ -1,6 +1,8 @@
 import { Disclosure, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
+import { Link } from "@remix-run/react"
 import { Fragment } from "react"
+import { Typography } from "./Typography"
 
 interface MenuItem {
   readonly link: string
@@ -37,18 +39,19 @@ export function Menu({ items }: MenuProps) {
                 <div className='hidden sm:block'>
                   <div className='flex space-x-4'>
                     {items.map((item) => (
-                      <a
+                      <Typography
+                        variant={item.active ? "menuActive" : "menu"}
+                        component={Link}
                         key={item.title}
-                        href={item.link}
-                        className={`
-													${item.active ? "font-bold text-primary hover:text-secondary" : "text-highlight hover:text-primary"}
-													rounded-md py-2 font-medium lg:px-3
-												`}
-                        aria-current={item.active ? "page" : undefined}
-                        onClick={() => close()}
+                        componentProps={{
+                          to: item.link,
+                          "aria-current": item.active ? "page" : undefined,
+                          onClick: () => close(),
+                        }}
+                        className={`rounded-md py-2 lg:px-3`}
                       >
                         {item.title}
-                      </a>
+                      </Typography>
                     ))}
                   </div>
                 </div>
@@ -68,22 +71,19 @@ export function Menu({ items }: MenuProps) {
             <Disclosure.Panel className='w-screen bg-transparent sm:hidden'>
               <div className='px-2 pt-2 pb-3'>
                 {items.map((item) => (
-                  <a
+                  <Typography
+                    variant={item.active ? "menuActive" : "menu"}
+                    component={Link}
                     key={item.title}
-                    href={item.link}
-                    className={`
-                      ${
-                        item.active
-                          ? "font-black text-primary hover:text-secondary"
-                          : "text-highlight hover:text-primary"
-                      }
-                      tracking-wide block rounded-md px-3 py-2 text-center align-middle text-base font-medium leading-9
-										`}
-                    aria-current={item.active ? "page" : undefined}
-                    onClick={() => close()}
+                    componentProps={{
+                      to: item.link,
+                      "aria-current": item.active ? "page" : undefined,
+                      onClick: () => close(),
+                    }}
+                    className={`block px-3 py-4 text-center`}
                   >
                     {item.title}
-                  </a>
+                  </Typography>
                 ))}
               </div>
             </Disclosure.Panel>
