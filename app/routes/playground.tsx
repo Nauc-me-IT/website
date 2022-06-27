@@ -18,7 +18,6 @@ export default function Playground() {
           {
             title: "Úvod",
             link: "#home",
-            active: true,
           },
           {
             title: "O kurzu",
@@ -35,6 +34,11 @@ export default function Playground() {
           {
             title: "Kontakt",
             link: "#contact",
+          },
+          {
+            title: "Přihlásit se",
+            link: "#login",
+            isImportant: true,
           },
         ]}
       />
