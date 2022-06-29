@@ -22,28 +22,28 @@ export default function Playground() {
             name: "Petr Glaser",
             email: "petr.glaser@naucme.it",
             position: "Staff Software Engineer",
-            image: "/images/qa_illustration.webp",
+            image: "/images/qa_illustration.svg",
           },
           {
             name: "Pavel Koudelka",
             email: "pavel.koudelka@naucme.it",
             position: "Sales",
-            image: "/images/qa_illustration.webp",
+            image: "/images/qa_illustration.svg",
           },
           {
             name: "Lýdie Hemalová",
             email: "lydie.hemalova@naucme.it",
             position: "Software Engineer in Test",
-            image: "/images/qa_illustration.webp",
+            image: "/images/qa_illustration.svg",
           },
         ]}
       />
 
-      <CourseBox image='/images/qa_illustration.webp' side='left' title='Vývojář' link='/'>
+      <CourseBox image='/images/qa_illustration.svg' side='right' title='Tester' link='/'>
         Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
         nepotřebuješ mnoho.
       </CourseBox>
-      <CourseBox image='/images/qa_illustration.webp' side='right' title='Vývojář' link='/'>
+      <CourseBox image='/images/dev_illustration.svg' side='left' title='Vývojář' link='/'>
         Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
         nepotřebuješ mnoho.
       </CourseBox>
