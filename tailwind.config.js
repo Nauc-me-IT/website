@@ -71,6 +71,9 @@ module.exports = {
         wiggle: "wiggle 1s ease-in-out infinite",
         pulseDown: "pulseDown 30s ease-in-out infinite",
       },
+      transitionProperty: {
+        backgroundSize: "background-size",
+      },
     },
   },
   plugins: [],

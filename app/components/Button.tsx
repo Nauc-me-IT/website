@@ -22,7 +22,7 @@ const mainClasses =
   "border-none polygon-path focus-visible:outline-none before:bg-primary focus:before:bg-secondary text-center appearance-button"
 const themeClasses = {
   main: "bg-primary",
-  off: "bg-scroll bg-animable bg-clip-border bg-origin-padding bg-transparent bg-100/0 bg-bottom bg-no-repeat transition-all duration-500 ease hover:bg-100/100",
+  off: "bg-scroll bg-animable bg-clip-border bg-origin-padding bg-transparent bg-100/0 bg-bottom bg-no-repeat transition-backgroundSize duration-500 ease hover:bg-100/100",
 }
 const sizeClasses = {
   large: "pt-6 pb-5 pl-11 pr-12",
