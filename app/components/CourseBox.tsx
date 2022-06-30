@@ -17,7 +17,7 @@ export function CourseBox({ image, side, title, children, link }: Props) {
         side === "left" ? "md:flex-row" : "md:flex-row-reverse"
       } items-center justify-center gap-x-36 gap-y-4 px-5`}
     >
-      <img src={image} width={"329px"} height={"354px"} alt={`Ilustrace ke kurzu ${title}`} loading='lazy'></img>
+      <img src={image} width={320} alt={`Ilustrace ke kurzu ${title}`} />
       <div className='flex w-fit max-w-lg flex-col'>
         <Typography variant='h3' className='mb-8'>
           {title}
