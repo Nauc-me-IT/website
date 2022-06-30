@@ -5,13 +5,15 @@ import { ContactForm } from "~/components/ContactForm"
 import { CourseBox } from "~/components/CourseBox"
 import { Step } from "~/components/Step"
 import { types, Typography } from "~/components/Typography"
-import { Facebook, LearnEarn, PayConsultancy, Time, Worldwide } from "~/icons"
+import { Facebook, LearnEarn, PayConsultancy, Time, Worldwide, Logo } from "~/icons"
 import { CatchPoints } from "~/components/CatchPoints"
 import { DownArrow } from "~/components/DownArrow"
 
 export default function Playground() {
   return (
     <div className='h-screen bg-background'>
+      <Logo width={128} />
+
       <DownArrow />
 
       <ContactForm />
