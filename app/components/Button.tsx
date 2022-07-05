@@ -22,11 +22,11 @@ const mainClasses =
   "border-none polygon-path focus-visible:outline-none before:bg-primary focus:before:bg-secondary text-center appearance-button"
 const themeClasses = {
   main: "bg-primary",
-  off: "bg-scroll bg-animable bg-clip-border bg-origin-padding bg-transparent bg-100/0 bg-bottom bg-no-repeat transition-all duration-500 ease hover:bg-100/100",
+  off: "bg-scroll bg-animable bg-clip-border bg-origin-padding bg-transparent bg-100/0 bg-bottom bg-no-repeat transition-backgroundSize duration-500 ease hover:bg-100/100",
 }
 const sizeClasses = {
   large: "pt-6 pb-5 pl-11 pr-12",
-  normal: "",
+  normal: "pt-2 pb-2 pl-7 pr-8",
 }
 const polygonBorderVars = {
   "--path": "20% 0%, 90% 0%, 100% 20%, 100% 50%, 80% 100%, 20% 100%, 10% 100%, 0% 70%, 0% 40%",
@@ -41,14 +41,14 @@ export function Button({ className, disabled, children, theme, size, ...rest }: 
   const props = {
     className: `${mainClasses} ${themeClasses[theme]} ${
       disabled ? "cursor-not-allowed opacity-80" : "cursor-pointer hover:animate-wiggle"
-    } ${"to" in rest ? "pointer-events-none" : "py-2 px-5"} ${typographyClasses.normal} ${
-      sizeClasses[size || "normal"]
-    } ${className ?? ""}`,
+    } ${"to" in rest ? "pointer-events-none" : sizeClasses[size || "normal"]} ${typographyClasses.normal} ${
+      className ?? ""
+    }`,
     style: polygonBorderVars,
   }
   return "to" in rest ? (
     <button {...props} tabIndex={-1}>
-      <Link {...rest} className='pointer-events-auto inline-flex py-2 px-5'>
+      <Link {...rest} className={`pointer-events-auto inline-flex ${sizeClasses[size || "normal"]}`}>
         {children}
       </Link>
     </button>

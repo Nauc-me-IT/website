@@ -5,14 +5,43 @@ import { ContactForm } from "~/components/ContactForm"
 import { CourseBox } from "~/components/CourseBox"
 import { Step } from "~/components/Step"
 import { types, Typography } from "~/components/Typography"
-import { Facebook, LearnEarn, PayConsultancy, Time, Worldwide, Logo } from "~/icons"
+import { Facebook, LearnEarn, PayConsultancy, Time, Worldwide } from "~/icons"
 import { CatchPoints } from "~/components/CatchPoints"
+import { Menu } from "~/components/Menu"
 import { DownArrow } from "~/components/DownArrow"
 
 export default function Playground() {
   return (
-    <div className='h-screen bg-background'>
-      <Logo width={128} />
+    <div className='h-screen bg-background pt-20'>
+      <Menu
+        items={[
+          {
+            title: "Úvod",
+            link: "#home",
+          },
+          {
+            title: "O kurzu",
+            link: "#about",
+          },
+          {
+            title: "Tester",
+            link: "#qa",
+          },
+          {
+            title: "Vývojář",
+            link: "#developer",
+          },
+          {
+            title: "Kontakt",
+            link: "#contact",
+          },
+          {
+            title: "Přihlásit se",
+            link: "#login",
+            isImportant: true,
+          },
+        ]}
+      />
 
       <DownArrow />
 
