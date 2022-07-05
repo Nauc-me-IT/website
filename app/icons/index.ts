@@ -1,4 +1,5 @@
 export { default as Facebook } from "./Facebook"
+export { default as Horizontal } from "./Horizontal"
 export { default as Instagram } from "./Instagram"
 export { default as LearnEarn } from "./LearnEarn"
 export { default as Logo } from "./Logo"
