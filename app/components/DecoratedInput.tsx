@@ -12,13 +12,11 @@ type TextareaProps = {
   readonly component: "textarea"
 } & DetailedHTMLProps<React.TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>
 
-const hexagonBorderVars = {
+const inputBorderVars = {
   "--path": "30px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px",
   "--border": "2px",
 } as React.CSSProperties
 
-export function DecoratedInput(props: InputProps): JSX.Element
-export function DecoratedInput(props: TextareaProps): JSX.Element
 export function DecoratedInput(props: InputProps | TextareaProps): JSX.Element {
   // TODO: Needs to solve props inference
   const Input: any = props.component ?? "input"
@@ -29,7 +27,7 @@ export function DecoratedInput(props: InputProps | TextareaProps): JSX.Element {
         {props.label}
       </Typography>
       <div
-        style={hexagonBorderVars}
+        style={inputBorderVars}
         className='polygon-path before:ease inline-block w-full before:bg-form before:transition-colors before:duration-150 focus-within:before:bg-primary'
       >
         <Input
