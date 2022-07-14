@@ -46,7 +46,7 @@ export default function Playground() {
 
       <div className='flex flex-row items-center justify-center gap-4'>
         <PackageBox title='Basic' benefits={["Základní kurz testera", "Neomezený přístup"]} price={0} />
-        <PackageBox title='Core' benefits={["Basic balíček", "5 konzultací"]} price={0} />
+        <PackageBox title='Core' benefits={["Basic balíček", "5 konzultací", "Přístup na Discord"]} price={0} />
       </div>
       <DownArrow />
 

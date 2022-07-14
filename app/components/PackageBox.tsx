@@ -7,19 +7,17 @@ type Props = {
 }
 
 const packageBoxBorderVars = {
-  "--path": "30px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px",
+  "--path": "30px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30px",
   "--border": "2px",
 } as React.CSSProperties
 
 export function PackageBox(props: Props) {
   return (
     <div
-      className='polygon-path flex h-96 w-fit flex-col justify-around p-8 before:bg-form'
+      className='polygon-path flex h-96 w-fit flex-col items-center justify-around px-8 before:bg-form'
       style={packageBoxBorderVars}
     >
-      <Typography variant='h3' className='mx-auto'>
-        {props.title}
-      </Typography>
+      <Typography variant='h3'>{props.title}</Typography>
       <ul className='list-dash'>
         {props.benefits.map((benefit) => (
           <Typography variant='normal' component='li' key={benefit}>
@@ -27,9 +25,7 @@ export function PackageBox(props: Props) {
           </Typography>
         ))}
       </ul>
-      <Typography variant='h3' className='mx-auto'>
-        {props.price} CZK
-      </Typography>
+      <Typography variant='h3'>{props.price} CZK</Typography>
       <Button theme='main' className='mx-auto w-fit'>
         Získat balíček
       </Button>
