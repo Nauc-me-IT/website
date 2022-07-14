@@ -10,6 +10,7 @@ import { CatchPoints } from "~/components/CatchPoints"
 import { Menu } from "~/components/Menu"
 import { DownArrow } from "~/components/DownArrow"
 import { PackageBox } from "~/components/PackageBox"
+import { Footer } from "~/components/Footer"
 
 export default function Playground() {
   return (
@@ -105,6 +106,8 @@ export default function Playground() {
       <CompanyBox />
 
       <Step order={3}>Zaregistruj se ZDARMA do kurzu</Step>
+
+      <Footer />
     </div>
   )
 }
