@@ -14,11 +14,11 @@ const packageBoxBorderVars = {
 export function PackageBox(props: Props) {
   return (
     <div
-      className='polygon-path flex h-96 w-fit flex-col items-center justify-around px-8 before:bg-form'
+      className='polygon-path flex h-full w-fit flex-col items-center justify-between gap-4 p-8 before:bg-form'
       style={packageBoxBorderVars}
     >
       <Typography variant='h3'>{props.title}</Typography>
-      <ul className='list-dash'>
+      <ul className='h-36 list-dash'>
         {props.benefits.map((benefit) => (
           <Typography variant='normal' component='li' key={benefit}>
             {benefit}
