@@ -51,11 +51,11 @@ export function Menu({ items }: MenuProps) {
         <>
           <div className='mx-auto px-6 lg:max-w-screen-2xl lg:px-0'>
             <div className='relative flex h-16 items-center justify-between'>
-              <div className='flex flex-1 items-center justify-between sm:items-stretch'>
+              <div className='flex flex-1 items-center justify-between lg:items-stretch'>
                 <div className='flex flex-shrink-0 items-center'>
                   <Logo width={120} />
                 </div>
-                <div className='inset-y-0 flex items-center sm:hidden'>
+                <div className='inset-y-0 flex items-center lg:hidden'>
                   {/* Mobile menu button*/}
                   <Disclosure.Button className='hover:bg-gray-700 focus:ring-white z-10 inline-flex items-center justify-center p-2 text-highlight hover:text-primary focus:outline-none focus:ring-2 focus:ring-inset'>
                     <span className='sr-only'>Otevřít menu</span>
@@ -66,7 +66,7 @@ export function Menu({ items }: MenuProps) {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className='hidden sm:block'>
+                <div className='hidden lg:block'>
                   <div className='flex items-center gap-x-12'>
                     {items.map((item) => (
                       <MenuItem close={close} key={item.title} item={item} />
@@ -85,7 +85,7 @@ export function Menu({ items }: MenuProps) {
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
-            <Disclosure.Panel className='absolute w-screen bg-background/75 sm:hidden'>
+            <Disclosure.Panel className='absolute w-screen bg-background/75 lg:hidden'>
               <div className='flex flex-col items-center gap-y-6 px-2 pt-2 pb-3'>
                 {items.map((item) => (
                   <MenuItem close={close} key={item.title} item={item} className='block w-fit text-center' />
