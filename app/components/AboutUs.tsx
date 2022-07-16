@@ -26,10 +26,10 @@ export function AboutUs({ people }: Props) {
           Proto abys mohl být tester, nepotřebuješ mnoho.
         </Typography>
         <div className='flex flex-row justify-center gap-x-10 xl:justify-start'>
-          <SocialButton to='/'>
+          <SocialButton to='/' label='Facebook stránka - Nauč mě IT'>
             <Facebook width={16} />
           </SocialButton>
-          <SocialButton to='/'>
+          <SocialButton to='/' label='Instagram stránka - Nauč mě IT'>
             <Instagram width={16} />
           </SocialButton>
         </div>

@@ -16,6 +16,7 @@ type ButtonProps = (LinkButtonProps | NormalButtonProps) & {
 }
 type SocialButtonProps = (Omit<NormalButtonProps, "theme"> | Omit<LinkButtonProps, "theme">) & {
   readonly children: React.ReactElement
+  readonly label: string
 }
 
 const mainClasses =
@@ -59,7 +60,7 @@ export function Button({ className, disabled, children, theme, size, ...rest }: 
   )
 }
 
-export function SocialButton({ className, disabled, children, ...rest }: SocialButtonProps) {
+export function SocialButton({ label, className, disabled, children, ...rest }: SocialButtonProps) {
   const props = {
     className: `${mainClasses} ${themeClasses.off} ${
       disabled ? "cursor-not-allowed opacity-80" : "cursor-pointer hover:animate-wiggle"
@@ -69,11 +70,11 @@ export function SocialButton({ className, disabled, children, ...rest }: SocialB
     style: hexagonBorderVars,
   }
   return "to" in rest ? (
-    <button {...props} tabIndex={-1}>
-      <Link {...rest} className='pointer-events-auto inline-flex py-2 px-5'>
+    <span {...props} tabIndex={-1}>
+      <Link {...rest} className='pointer-events-auto inline-flex py-2 px-5' aria-label={label}>
         {children}
       </Link>
-    </button>
+    </span>
   ) : (
     <button {...props} {...rest}>
       {children}

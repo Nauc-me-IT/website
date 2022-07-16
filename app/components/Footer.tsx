@@ -13,10 +13,10 @@ export function Footer() {
             Jsme na sociálních sítích!
           </Typography>
           <div className='flex flex-row justify-center gap-6'>
-            <SocialButton to='/'>
+            <SocialButton to='/' label='Facebook stránka - Nauč mě IT'>
               <Facebook width={16} />
             </SocialButton>
-            <SocialButton>
+            <SocialButton label='Instagram stránka - Nauč mě IT'>
               <Instagram width={16} />
             </SocialButton>
           </div>
