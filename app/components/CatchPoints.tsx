@@ -7,7 +7,7 @@ type Props = {
 
 export function CatchPoints({ icon, children }: Props) {
   return (
-    <div className='flex flex-row items-center'>
+    <div className='flex flex-row items-center justify-center'>
       {icon}
       <Typography variant='normal' className='max-w-xxs'>
         {children}

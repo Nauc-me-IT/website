@@ -19,7 +19,7 @@ export function CourseBox({ image, side, title, children, link }: Props) {
     >
       <img src={image} width={320} alt={`Ilustrace ke kurzu ${title}`} />
       <div className='flex w-fit max-w-lg flex-col'>
-        <Typography variant='h3' className='mb-8'>
+        <Typography variant='h3' component='h3' className='mb-8'>
           {title}
         </Typography>
         <Typography variant='normal' className='max-w-xsProse'>

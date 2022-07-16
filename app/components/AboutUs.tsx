@@ -12,7 +12,7 @@ type Props = {
 }
 export function AboutUs({ people }: Props) {
   return (
-    <div className={`flex flex-col items-center justify-center gap-x-36 gap-y-4 px-5 xl:flex-row`}>
+    <div className={`mt-10 flex flex-col items-center justify-center gap-x-36 gap-y-4 px-5 xl:flex-row`}>
       <div className='flex w-fit max-w-xl flex-col'>
         <Typography variant='h2' className='mb-8'>
           O nás
