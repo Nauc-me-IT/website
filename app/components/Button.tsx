@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react"
-import type { RemixLinkProps } from "@remix-run/react/components"
+import type { RemixLinkProps } from "@remix-run/react/dist/components"
 import { typographyClasses } from "./Typography"
 
 type Props = {
@@ -16,13 +16,14 @@ type ButtonProps = (LinkButtonProps | NormalButtonProps) & {
 }
 type SocialButtonProps = (Omit<NormalButtonProps, "theme"> | Omit<LinkButtonProps, "theme">) & {
   readonly children: React.ReactElement
+  readonly label: string
 }
 
 const mainClasses =
   "border-none polygon-path focus-visible:outline-none before:bg-primary focus:before:bg-secondary text-center appearance-button"
 const themeClasses = {
   main: "bg-primary",
-  off: "bg-scroll bg-animable bg-clip-border bg-origin-padding bg-transparent bg-100/0 bg-bottom bg-no-repeat transition-backgroundSize duration-500 ease hover:bg-100/100",
+  off: "bg-scroll bg-animable bg-clip-border bg-origin-padding bg-transparent bg-100/0 bg-bottom bg-no-repeat transition-backgroundSize duration-1000 hover:duration-500 ease hover:bg-100/100",
 }
 const sizeClasses = {
   large: "pt-6 pb-5 pl-11 pr-12",
@@ -59,7 +60,7 @@ export function Button({ className, disabled, children, theme, size, ...rest }: 
   )
 }
 
-export function SocialButton({ className, disabled, children, ...rest }: SocialButtonProps) {
+export function SocialButton({ label, className, disabled, children, ...rest }: SocialButtonProps) {
   const props = {
     className: `${mainClasses} ${themeClasses.off} ${
       disabled ? "cursor-not-allowed opacity-80" : "cursor-pointer hover:animate-wiggle"
@@ -69,13 +70,13 @@ export function SocialButton({ className, disabled, children, ...rest }: SocialB
     style: hexagonBorderVars,
   }
   return "to" in rest ? (
-    <button {...props} tabIndex={-1}>
-      <Link {...rest} className='pointer-events-auto inline-flex py-2 px-5'>
+    <span {...props} tabIndex={-1}>
+      <Link {...rest} className='pointer-events-auto inline-flex py-2 px-5' aria-label={label}>
         {children}
       </Link>
-    </button>
+    </span>
   ) : (
-    <button {...props} {...rest}>
+    <button {...props} {...rest} aria-label={label}>
       {children}
     </button>
   )
