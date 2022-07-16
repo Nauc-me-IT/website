@@ -1,6 +1,7 @@
 import { Horizontal, Logo, Facebook, Instagram } from "~/icons"
 import { Typography } from "./Typography"
 import { SocialButton } from "./Button"
+import { Link } from "@remix-run/react"
 
 export function Footer() {
   return (
@@ -22,12 +23,30 @@ export function Footer() {
           </div>
         </div>
         <div className='md:order-0 order-2 flex flex-col'>
-          <Typography variant='normal'>Proč se přidat</Typography>
-          <Typography variant='normal'>Jak to funguje</Typography>
-          <Typography variant='normal'>Cenové balíčky</Typography>
-          <Typography variant='normal'>Kontakt</Typography>
-          <Typography variant='normal'>Přihlásit</Typography>
-          <Typography variant='normal'>Registrovat</Typography>
+          <Typography componentProps={{ to: "#home" }} component={Link} variant='normal'>
+            Úvod
+          </Typography>
+          <Typography componentProps={{ to: "#how" }} component={Link} variant='normal'>
+            Jak to funguje
+          </Typography>
+          <Typography componentProps={{ to: "#packages" }} component={Link} variant='normal'>
+            Cenové balíčky
+          </Typography>
+          <Typography componentProps={{ to: "#courses" }} component={Link} variant='normal'>
+            Kurzy
+          </Typography>
+          <Typography componentProps={{ to: "#about" }} component={Link} variant='normal'>
+            O nás
+          </Typography>
+          <Typography componentProps={{ to: "#company" }} component={Link} variant='normal'>
+            Pro firmy
+          </Typography>
+          <Typography componentProps={{ to: "#contact" }} component={Link} variant='normal'>
+            Kontakt
+          </Typography>
+          <Typography componentProps={{ to: "#login" }} component={Link} variant='normal'>
+            Registrovat
+          </Typography>
         </div>
         <div className='flex flex-col gap-3'>
           <Typography variant='step'>Kontakt</Typography>
