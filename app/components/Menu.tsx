@@ -44,12 +44,13 @@ function MenuItem({
     </Typography>
   )
 }
+
 export function Menu({ items }: MenuProps) {
   return (
     <Disclosure as='nav' className='fixed top-0 z-20 w-screen bg-background/90 transition-all'>
       {({ open, close }) => (
         <>
-          <div className='mx-auto max-w-screen-3xl px-6 lg:px-0'>
+          <div className='mx-auto mt-4 max-w-screen-3xl px-6 lg:px-0'>
             <div className='relative flex h-16 items-center justify-between'>
               <div className='flex flex-1 items-center justify-between lg:items-stretch'>
                 <div className='flex flex-shrink-0 items-center 2xl:ml-56'>
