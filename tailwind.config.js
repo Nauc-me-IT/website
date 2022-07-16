@@ -56,11 +56,13 @@ module.exports = {
       maxWidth: {
         xxs: "14rem",
         xsProse: "41ch",
+        sProse: "45ch",
       },
       keyframes: {
         wiggle: {
-          "0%, 100%": { transform: "rotate(-2deg)" },
-          "50%": { transform: "rotate(2deg)" },
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(-1deg)" },
+          "75%": { transform: "rotate(1deg)" },
         },
         pulseDown: {
           "0%, 10%, 100%": { transform: "translateY(0)" },
@@ -68,7 +70,7 @@ module.exports = {
         },
       },
       animation: {
-        wiggle: "wiggle 1s ease-in-out infinite",
+        wiggle: "wiggle 1s ease-in-out 1",
         pulseDown: "pulseDown 30s ease-in-out infinite",
       },
       transitionProperty: {

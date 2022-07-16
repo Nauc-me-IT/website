@@ -5,12 +5,16 @@ import { ContactForm } from "~/components/ContactForm"
 import { CourseBox } from "~/components/CourseBox"
 import { Step } from "~/components/Step"
 import { types, Typography } from "~/components/Typography"
-import { Facebook, LearnEarn, PayConsultancy, Time, Worldwide } from "~/icons"
-import { CatchPoints } from "~/components/CatchPoints"
+import { Facebook } from "~/icons"
 import { Menu } from "~/components/Menu"
 import { DownArrow } from "~/components/DownArrow"
 import { PackageBox } from "~/components/PackageBox"
 import { Footer } from "~/components/Footer"
+import { Button } from "../components/Button"
+import { Landing } from "../components/Landing"
+import { How } from "../components/How"
+import { Packages } from "../components/Packages"
+import { Courses } from "~/components/Courses"
 
 export default function Playground() {
   return (
@@ -22,16 +26,24 @@ export default function Playground() {
             link: "#home",
           },
           {
-            title: "O kurzu",
+            title: "Jak to funguje?",
             link: "#about",
           },
           {
-            title: "Tester",
+            title: "Balíčky",
             link: "#qa",
           },
           {
-            title: "Vývojář",
+            title: "Kurzy",
             link: "#developer",
+          },
+          {
+            title: "O nás",
+            link: "#contact",
+          },
+          {
+            title: "Pro firmy",
+            link: "#contact",
           },
           {
             title: "Kontakt",
@@ -44,18 +56,15 @@ export default function Playground() {
           },
         ]}
       />
+      <Landing />
 
-      <div className='flex h-96 flex-row items-center justify-center gap-4'>
-        <PackageBox title='Basic' benefits={["Základní kurz testera", "Neomezený přístup"]} price={0} />
-        <PackageBox
-          title='Core'
-          benefits={["Basic balíček", "5 konzultací", "Přístup na Discord", "Privátní skupina", "Prioritní schůzky"]}
-          price={0}
-        />
-      </div>
-      <DownArrow />
+      <DownArrow className='mx-auto mb-20' />
 
-      <ContactForm />
+      <How />
+
+      <Packages />
+
+      <Courses />
 
       <AboutUs
         people={[
@@ -71,45 +80,12 @@ export default function Playground() {
             position: "Sales",
             image: "/images/qa_illustration.svg",
           },
-          {
-            name: "Lýdie Hemalová",
-            email: "lydie.hemalova@naucme.it",
-            position: "Software Engineer in Test",
-            image: "/images/qa_illustration.svg",
-          },
         ]}
       />
 
-      <CourseBox image='/images/qa_illustration.svg' side='right' title='Tester' link='/'>
-        Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
-        nepotřebuješ mnoho.
-      </CourseBox>
-      <CourseBox image='/images/dev_illustration.svg' side='left' title='Vývojář' link='/'>
-        Práce testera je hledání chyb a upozorňování na ně srozumitelnou formou. Proto abys mohl být tester,
-        nepotřebuješ mnoho.
-      </CourseBox>
-
-      <SocialButton to='/'>
-        <Facebook />
-      </SocialButton>
-      <SocialButton onClick={() => alert("click works")}>
-        <Facebook />
-      </SocialButton>
-
-      <CatchPoints icon={<LearnEarn />}>Učíš se a zároveň vyděláváš</CatchPoints>
-      <CatchPoints icon={<PayConsultancy />}>Platíš pouze za konzultace s{"\u00A0"}odborníkem z oboru</CatchPoints>
-      <CatchPoints icon={<Time />}>Rychlost kurzu si určuješ sám</CatchPoints>
-      <CatchPoints icon={<Worldwide />}>Celý kurz je online přístupný odkudkoliv</CatchPoints>
-
-      {types.map((t, i) => (
-        <Typography variant={t} key={`typography-${i}`} component='p' className='block'>
-          Toto je test, zkouška.
-        </Typography>
-      ))}
-
       <CompanyBox />
 
-      <Step order={3}>Zaregistruj se ZDARMA do kurzu</Step>
+      <ContactForm />
 
       <Footer />
     </div>

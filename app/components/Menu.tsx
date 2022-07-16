@@ -46,7 +46,7 @@ function MenuItem({
 }
 export function Menu({ items }: MenuProps) {
   return (
-    <Disclosure as='nav' className='fixed top-0 z-20 w-screen bg-background/75 transition-all'>
+    <Disclosure as='nav' className='fixed top-0 z-20 w-screen bg-background/95 transition-all'>
       {({ open, close }) => (
         <>
           <div className='mx-auto px-6 lg:max-w-screen-2xl lg:px-0'>

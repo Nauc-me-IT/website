@@ -26,7 +26,7 @@ export function PackageBox(props: Props) {
         ))}
       </ul>
       <Typography variant='h3'>{props.price} CZK</Typography>
-      <Button theme='main' className='mx-auto w-fit'>
+      <Button theme='off' size='large' className='mx-auto w-fit'>
         Získat balíček
       </Button>
     </div>
