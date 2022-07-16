@@ -16,7 +16,7 @@ export function ContactForm() {
       <DecoratedInput type='text' label='Vaše jméno' placeholder='Zadejte své jméno' required />
       <div className='flex flex-col gap-9 md:flex-row'>
         <DecoratedInput type='email' label='Váš e-mail' placeholder='Zadejte svůj email' required />
-        <DecoratedInput type='tel' label='Vaše jméno' placeholder='Zadejte svoje číslo' />
+        <DecoratedInput type='tel' label='Vaše telefonní číslo' placeholder='Zadejte svoje číslo' />
       </div>
       <DecoratedInput
         component='textarea'
