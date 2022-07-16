@@ -7,10 +7,8 @@ type Props = {
 
 export function Step({ order, children }: Props) {
   return (
-    <div className='flex flex-row items-center'>
-      <div>
-        <Typography variant='eyeCatch'>{`0${order}`}</Typography>
-      </div>
+    <div className='flex flex-row items-center gap-8'>
+      <Typography variant='eyeCatch'>{`0${order}`}</Typography>
       <div className='flex flex-col'>
         <Typography variant='step'>Krok</Typography>
         <Typography variant='normal' className='max-w-xxs'>
