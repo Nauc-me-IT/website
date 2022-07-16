@@ -76,7 +76,7 @@ export function SocialButton({ label, className, disabled, children, ...rest }: 
       </Link>
     </span>
   ) : (
-    <button {...props} {...rest}>
+    <button {...props} {...rest} aria-label={label}>
       {children}
     </button>
   )
