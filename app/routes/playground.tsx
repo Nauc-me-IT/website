@@ -11,13 +11,9 @@ import { Courses } from "~/components/Courses"
 
 export default function Playground() {
   return (
-    <div className='h-screen bg-background pt-20'>
+    <div className='bg-landing bg-cover pt-20'>
       <Menu
         items={[
-          {
-            title: "Úvod",
-            link: "#home",
-          },
           {
             title: "Jak to funguje?",
             link: "#how",
@@ -49,6 +45,9 @@ export default function Playground() {
           },
         ]}
       />
+      <img src='/images/left.svg' className='fixed top-0 -left-20 hidden h-full 2xl:block' alt='' height='100vh' />
+      <img src='/images/right.svg' className='fixed top-0 -right-20 hidden h-full 2xl:block' alt='' height='110vh' />
+
       <Landing />
 
       <DownArrow className='mx-auto mb-20' />

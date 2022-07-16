@@ -30,7 +30,13 @@ export function Landing() {
           Vyzkoušej ZDARMA
         </Button>
       </div>
-      <img src='/images/main_illustration.svg' width='870px' height='726px' alt='Ilustrační úvodní obrázek' />
+      <img
+        src='/images/main_illustration.svg'
+        width='870px'
+        height='726px'
+        alt='Ilustrační úvodní obrázek'
+        className='order-first w-3/4 lg:w-1/2 2xl:order-1'
+      />
     </main>
   )
 }

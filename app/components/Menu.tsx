@@ -49,10 +49,10 @@ export function Menu({ items }: MenuProps) {
     <Disclosure as='nav' className='fixed top-0 z-20 w-screen bg-background/90 transition-all'>
       {({ open, close }) => (
         <>
-          <div className='mx-auto px-6 lg:max-w-screen-2xl lg:px-0'>
+          <div className='mx-auto max-w-screen-3xl px-6 lg:px-0'>
             <div className='relative flex h-16 items-center justify-between'>
               <div className='flex flex-1 items-center justify-between lg:items-stretch'>
-                <div className='flex flex-shrink-0 items-center'>
+                <div className='flex flex-shrink-0 items-center 2xl:ml-56'>
                   <Logo width={120} />
                 </div>
                 <div className='inset-y-0 flex items-center lg:hidden'>
@@ -66,7 +66,7 @@ export function Menu({ items }: MenuProps) {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className='hidden lg:block'>
+                <div className='mr-5 hidden lg:block'>
                   <div className='flex items-center gap-x-12'>
                     {items.map((item) => (
                       <MenuItem close={close} key={item.title} item={item} />
