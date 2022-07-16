@@ -20,23 +20,23 @@ export default function Playground() {
           },
           {
             title: "Jak to funguje?",
-            link: "#about",
+            link: "#how",
           },
           {
             title: "Balíčky",
-            link: "#qa",
+            link: "#packages",
           },
           {
             title: "Kurzy",
-            link: "#developer",
+            link: "#courses",
           },
           {
             title: "O nás",
-            link: "#contact",
+            link: "#about",
           },
           {
             title: "Pro firmy",
-            link: "#contact",
+            link: "#company",
           },
           {
             title: "Kontakt",

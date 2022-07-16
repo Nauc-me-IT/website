@@ -3,8 +3,9 @@ import { Typography } from "./Typography"
 
 export function Courses() {
   return (
-    <section>
-      <Typography variant='h2' component='h2' className='my-20 text-center'>
+    <section className='py-20'>
+      <span id='courses'>&nbsp;</span>
+      <Typography variant='h2' component='h2' className='text-center'>
         Možné pozice v průběhu kurzu
       </Typography>
       <CourseBox image='/images/qa_illustration.svg' side='right' title='Tester'>

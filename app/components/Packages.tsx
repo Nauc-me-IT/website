@@ -4,7 +4,8 @@ import { Typography } from "./Typography"
 export function Packages() {
   return (
     <section className='flex flex-col items-center justify-center gap-4 bg-alt px-5 pt-20 pb-28'>
-      <Typography variant='h2' className='mb-8 text-center'>
+      <span id='packages'>&nbsp;</span>
+      <Typography variant='h2' component='h2' className='mb-8 text-center'>
         Začni se učit programovat ještě dnes!
       </Typography>
       <Typography variant='normal' className='mb-6 text-center' component='p'>

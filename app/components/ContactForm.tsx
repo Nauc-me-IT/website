@@ -5,6 +5,7 @@ import { Typography } from "./Typography"
 export function ContactForm() {
   return (
     <form className='mx-auto flex w-10/12 flex-col gap-y-4 md:w-6/12'>
+      <span id='contact'>&nbsp;</span>
       <Typography variant='h2' component='h2' className='mx-auto mb-4'>
         Napište nám
       </Typography>

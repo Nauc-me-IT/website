@@ -7,6 +7,7 @@ export function Landing() {
   return (
     <main className='flex flex-row flex-wrap items-center justify-center px-5'>
       <div>
+        <span id='home'>&nbsp;</span>
         <Typography variant='h2' component='h1'>
           Nauč se programovat
         </Typography>

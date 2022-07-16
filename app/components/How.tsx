@@ -5,6 +5,7 @@ import { Typography } from "./Typography"
 export function How() {
   return (
     <section>
+      <span id='how'>&nbsp;</span>
       <Typography variant='h2' component='h2' className='mb-8 text-center'>
         Jak to funguje?
       </Typography>
