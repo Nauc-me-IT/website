@@ -74,6 +74,9 @@ module.exports = {
       transitionProperty: {
         backgroundSize: "background-size",
       },
+      listStyleType: {
+        dash: '"- "',
+      },
     },
   },
   plugins: [],

@@ -9,6 +9,7 @@ import { Facebook, LearnEarn, PayConsultancy, Time, Worldwide } from "~/icons"
 import { CatchPoints } from "~/components/CatchPoints"
 import { Menu } from "~/components/Menu"
 import { DownArrow } from "~/components/DownArrow"
+import { PackageBox } from "~/components/PackageBox"
 import { Footer } from "~/components/Footer"
 
 export default function Playground() {
@@ -44,6 +45,14 @@ export default function Playground() {
         ]}
       />
 
+      <div className='flex h-96 flex-row items-center justify-center gap-4'>
+        <PackageBox title='Basic' benefits={["Základní kurz testera", "Neomezený přístup"]} price={0} />
+        <PackageBox
+          title='Core'
+          benefits={["Basic balíček", "5 konzultací", "Přístup na Discord", "Privátní skupina", "Prioritní schůzky"]}
+          price={0}
+        />
+      </div>
       <DownArrow />
 
       <ContactForm />
