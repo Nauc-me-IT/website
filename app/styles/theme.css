@@ -57,3 +57,13 @@
     mask: paint(polygon-border);
   }
 }
+
+span[id] {
+  content: "";
+  display: block;
+  height: 75px;
+  margin-top: -75px;
+  visibility: hidden;
+  position: relative;
+  z-index: -1;
+}
