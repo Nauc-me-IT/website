@@ -50,17 +50,21 @@ module.exports = {
         "100/0": "100% 0%",
       },
       backgroundImage: {
+        landing: "image-set(url('/images/bg-landing.png') 1x, url('/images/bg-landing-2x.avif') 2x)",
         animable: "linear-gradient(rgb(var(--color-primary)) 0 0)",
         alt: "linear-gradient(90deg, rgb(17, 25, 58) 0%, rgb(54, 69, 122) 100%), linear-gradient(270deg, rgba(109,157,255,0.4) 0%, rgba(141,130,255,0.4) 54%, rgba(47,58,145,0.4) 87.9%, rgba(21,45,86,0.4) 100%)",
       },
       maxWidth: {
         xxs: "14rem",
         xsProse: "41ch",
+        sProse: "45ch",
+        "screen-3xl": "1920px",
       },
       keyframes: {
         wiggle: {
-          "0%, 100%": { transform: "rotate(-2deg)" },
-          "50%": { transform: "rotate(2deg)" },
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(-1deg)" },
+          "75%": { transform: "rotate(1deg)" },
         },
         pulseDown: {
           "0%, 10%, 100%": { transform: "translateY(0)" },
@@ -68,7 +72,7 @@ module.exports = {
         },
       },
       animation: {
-        wiggle: "wiggle 1s ease-in-out infinite",
+        wiggle: "wiggle 1s ease-in-out 1",
         pulseDown: "pulseDown 30s ease-in-out infinite",
       },
       transitionProperty: {

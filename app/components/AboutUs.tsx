@@ -12,9 +12,10 @@ type Props = {
 }
 export function AboutUs({ people }: Props) {
   return (
-    <div className={`flex flex-col items-center justify-center gap-x-36 gap-y-4 px-5 xl:flex-row`}>
+    <div className={`mt-10 flex flex-col items-center justify-center gap-x-36 gap-y-4 px-5 xl:flex-row`}>
       <div className='flex w-fit max-w-xl flex-col'>
-        <Typography variant='h2' className='mb-8'>
+        <span id='about'>&nbsp;</span>
+        <Typography variant='h2' component='h2' className='mb-8'>
           O nás
         </Typography>
         <Typography variant='normal' className='mb-6 max-w-xsProse' component='p'>
@@ -25,10 +26,10 @@ export function AboutUs({ people }: Props) {
           Proto abys mohl být tester, nepotřebuješ mnoho.
         </Typography>
         <div className='flex flex-row justify-center gap-x-10 xl:justify-start'>
-          <SocialButton to='/'>
+          <SocialButton to='/' label='Facebook stránka - Nauč mě IT'>
             <Facebook width={16} />
           </SocialButton>
-          <SocialButton to='/'>
+          <SocialButton to='/' label='Instagram stránka - Nauč mě IT'>
             <Instagram width={16} />
           </SocialButton>
         </div>
