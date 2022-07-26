@@ -81,10 +81,10 @@ export function Menu({ items }: MenuProps) {
           </div>
 
           <Transition
-            enter='transition-opacity ease-out duration-1000'
+            enter='transition-opacity ease-out duration-300'
             enterFrom='opacity-0'
             enterTo='opacity-100'
-            leave='transition-opacity ease-in duration-1000'
+            leave='transition-opacity ease-in duration-500'
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
