@@ -50,7 +50,10 @@ export default function Playground() {
 
       <Landing />
 
-      <DownArrow className='mx-auto mb-20' />
+      <DownArrow
+        className='mx-auto mb-20 cursor-pointer'
+        onClick={() => window.scrollBy(0, document.documentElement.clientHeight * 0.8)}
+      />
 
       <How />
 
