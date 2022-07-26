@@ -67,7 +67,7 @@ export function Menu({ items }: MenuProps) {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className='mr-5 hidden lg:block'>
+                <div className='mr-10 hidden lg:block'>
                   <div className='flex items-center gap-x-12'>
                     {items.map((item) => (
                       <MenuItem close={close} key={item.title} item={item} />
