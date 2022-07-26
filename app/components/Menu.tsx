@@ -54,7 +54,9 @@ export function Menu({ items }: MenuProps) {
             <div className='relative flex h-16 items-center justify-between'>
               <div className='flex flex-1 items-center justify-between lg:items-stretch'>
                 <div className='flex flex-shrink-0 items-center 2xl:ml-56'>
-                  <Logo width={120} />
+                  <Link to='#home' className='flex items-center'>
+                    <Logo width={120} />
+                  </Link>
                 </div>
                 <div className='inset-y-0 flex items-center lg:hidden'>
                   {/* Mobile menu button*/}
