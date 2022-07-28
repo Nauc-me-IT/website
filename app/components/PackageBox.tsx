@@ -14,7 +14,7 @@ const packageBoxBorderVars = {
 export function PackageBox(props: Props) {
   return (
     <div
-      className='polygon-path flex h-full w-fit flex-col items-center justify-between gap-4 p-8 before:bg-form'
+      className='polygon-path flex h-full w-80 flex-col items-center justify-between gap-4 p-8 before:bg-form'
       style={packageBoxBorderVars}
     >
       <Typography variant='h3'>{props.title}</Typography>

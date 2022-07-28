@@ -54,7 +54,9 @@ export function Menu({ items }: MenuProps) {
             <div className='relative flex h-16 items-center justify-between'>
               <div className='flex flex-1 items-center justify-between lg:items-stretch'>
                 <div className='flex flex-shrink-0 items-center 2xl:ml-56'>
-                  <Logo width={120} />
+                  <Link to='#home' className='flex items-center'>
+                    <Logo width={120} />
+                  </Link>
                 </div>
                 <div className='inset-y-0 flex items-center lg:hidden'>
                   {/* Mobile menu button*/}
@@ -67,7 +69,7 @@ export function Menu({ items }: MenuProps) {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className='mr-5 hidden lg:block'>
+                <div className='mr-10 hidden lg:block'>
                   <div className='flex items-center gap-x-12'>
                     {items.map((item) => (
                       <MenuItem close={close} key={item.title} item={item} />
@@ -79,10 +81,10 @@ export function Menu({ items }: MenuProps) {
           </div>
 
           <Transition
-            enter='transition-opacity ease-out duration-1000'
+            enter='transition-opacity ease-out duration-300'
             enterFrom='opacity-0'
             enterTo='opacity-100'
-            leave='transition-opacity ease-in duration-1000'
+            leave='transition-opacity ease-in duration-500'
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
