@@ -11,7 +11,7 @@ import { Courses } from "~/components/Courses"
 
 export default function Playground() {
   return (
-    <div className='bg-landing bg-cover pt-20'>
+    <div className='bg-landing bg-cover bg-fixed pt-20'>
       <Menu
         items={[
           {
