@@ -29,7 +29,7 @@ export function ContactForm() {
         label='Vaše zpráva'
         placeholder='Zadejte svoji zprávu...'
         required
-        className='resize-none'
+        className='resize-vertical min-h-28'
       />
       <Button size='large' type='submit' theme='off' className='w-fit self-end'>
         Odeslat zprávu
