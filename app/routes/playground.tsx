@@ -45,8 +45,8 @@ export default function Playground() {
           },
         ]}
       />
-      <img src='/images/left.svg' className='fixed top-0 -left-20 hidden h-full 2xl:block' alt='' height='100vh' />
-      <img src='/images/right.svg' className='fixed top-0 -right-20 hidden h-full 2xl:block' alt='' height='110vh' />
+      <img src='/images/left.svg' className='fixed top-0 -left-20 hidden h-full 3xl:block' alt='' height='100vh' />
+      <img src='/images/right.svg' className='fixed top-0 -right-20 hidden h-full 3xl:block' alt='' height='110vh' />
 
       <Landing />
 

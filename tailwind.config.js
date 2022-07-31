@@ -24,6 +24,7 @@ module.exports = {
       montserrat: ["Montserrat", "sans-serif"],
     },
     fontSize: {
+      xsDeviceBody: "0.75rem",
       xs: "0.875rem",
       sm: "1rem",
       base: "1.125rem",
@@ -83,6 +84,10 @@ module.exports = {
       },
       listStyleType: {
         dash: '"- "',
+      },
+      screens: {
+        xs: "360px",
+        "3xl": "1920px",
       },
     },
   },
