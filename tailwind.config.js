@@ -24,6 +24,7 @@ module.exports = {
       montserrat: ["Montserrat", "sans-serif"],
     },
     fontSize: {
+      xsDeviceBody: "0.75rem",
       xs: "0.875rem",
       sm: "1rem",
       base: "1.125rem",
@@ -50,9 +51,12 @@ module.exports = {
         "100/0": "100% 0%",
       },
       backgroundImage: {
-        landing: "image-set(url('/images/bg-landing.png') 1x, url('/images/bg-landing-2x.avif') 2x)",
+        landing: "image-set(url('/images/bg-landing.webp') 1x, url('/images/bg-landing.webp') 2x)",
         animable: "linear-gradient(rgb(var(--color-primary)) 0 0)",
         alt: "linear-gradient(90deg, rgb(17, 25, 58) 0%, rgb(54, 69, 122) 100%), linear-gradient(270deg, rgba(109,157,255,0.4) 0%, rgba(141,130,255,0.4) 54%, rgba(47,58,145,0.4) 87.9%, rgba(21,45,86,0.4) 100%)",
+      },
+      minHeight: {
+        28: "7rem",
       },
       maxWidth: {
         xxs: "14rem",
@@ -80,6 +84,10 @@ module.exports = {
       },
       listStyleType: {
         dash: '"- "',
+      },
+      screens: {
+        xs: "360px",
+        "3xl": "1920px",
       },
     },
   },

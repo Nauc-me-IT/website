@@ -53,12 +53,12 @@ export function Menu({ items }: MenuProps) {
           <div className='mx-auto mt-4 max-w-screen-3xl px-6 lg:px-0'>
             <div className='relative flex h-16 items-center justify-between'>
               <div className='flex flex-1 items-center justify-between lg:items-stretch'>
-                <div className='flex flex-shrink-0 items-center 2xl:ml-56'>
-                  <Link to='#home' className='flex items-center'>
+                <div className='ml-3 flex flex-shrink-0 items-center lg:ml-14 2xl:ml-56'>
+                  <Link to='#home' className='flex items-center' aria-label='Logo Nauč mě IT'>
                     <Logo width={120} />
                   </Link>
                 </div>
-                <div className='inset-y-0 flex items-center lg:hidden'>
+                <div className='inset-y-0 flex items-center xl:hidden'>
                   {/* Mobile menu button*/}
                   <Disclosure.Button className='focus:ring-white z-10 inline-flex items-center justify-center p-2 text-highlight hover:text-primary focus:outline-none focus:ring-2 focus:ring-inset'>
                     <span className='sr-only'>Otevřít menu</span>
@@ -69,7 +69,7 @@ export function Menu({ items }: MenuProps) {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className='mr-10 hidden lg:block'>
+                <div className='mr-10 hidden xl:block'>
                   <div className='flex items-center gap-x-12'>
                     {items.map((item) => (
                       <MenuItem close={close} key={item.title} item={item} />
@@ -88,7 +88,7 @@ export function Menu({ items }: MenuProps) {
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
-            <Disclosure.Panel className='absolute w-screen bg-background/90 lg:hidden'>
+            <Disclosure.Panel className='absolute w-screen bg-background/90 xl:hidden'>
               <div className='flex flex-col items-center gap-y-6 px-2 pt-2 pb-3'>
                 {items.map((item) => (
                   <MenuItem close={close} key={item.title} item={item} className='block w-fit text-center' />
