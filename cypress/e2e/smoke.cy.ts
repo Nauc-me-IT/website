@@ -43,6 +43,6 @@ describe("smoke tests", () => {
 
     cy.findByRole("button", { name: /delete/i }).click()
 
-    cy.findByText("No notes yet")
+    cy.findByText("No notes ye")
   })
 })
